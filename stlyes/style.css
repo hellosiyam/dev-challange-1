@@ -5,24 +5,14 @@ body{
   font-style: normal;
   margin: 75px;
   color: FAFAF9;
-  /* background-image: url(../resources/blur-bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* background-blend-mode: color-burn; */
-  /* background-position: 100%; */
 }
 
-section{
+.continer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 56px;
     justify-content: space-between;
-    align-items: center;
 }
-.star{
-    /* border: 1px solid goldenrod; */
-}
-
 .main-star{
     height: 56px;
     width: 56px;
@@ -36,7 +26,6 @@ h4{
     font-size: 1.25rem;
     color: #595961;
     line-height: 40px;
-    /* width: 450px; */
 }
 .checklist-discript{
     display: flex;
@@ -52,19 +41,19 @@ h4{
     gap: 40px;
 }
 .saction-1{
-    /* border: 2px solid blue; */
     gap: 4px;
     padding: 16px 48px 16px 24px;
     box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
     width: fit-content;
-    /* align-items: end;
-    justify-content: center; */
-    background-color: FFFFFF;
-
-    
-}
-#section-1{
+    background-color: FFFFFF;   
     align-self: flex-end;
+}
+.saction-2{
+    gap: 4px;
+    padding: 16px 48px 16px 24px;
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+    width: fit-content;
+    background-color: FFFFFF;   
 }
 .icon{
     display: flex;
@@ -88,5 +77,53 @@ h4{
     font-size: 1rem;
     color: #595961;
     width: 290px;
-    margin-top: 16px;
+    margin-top: -16px;
+}
+
+/* Media Quariy for small Devices */
+@media screen and (max-width:640px) {
+    body{
+        margin: 32px;
+    }
+    .continer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .continer-2{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+    .saction-1{
+        padding: 24px;
+        background-color: #ffffff;
+    }
+    .saction-2{
+        padding: 24px;
+        background-color: #ffffff;
+    }
+}
+
+/* Media quary for medium devices */
+@media screen and (min-width:640px) and (max-width:1024px) {
+    body{
+        margin: 16px;
+    }
+    .continer{
+        display: flex;
+        flex-direction: column;
+    }
+    .continer-2{
+        display: flex;
+        gap: 16px;
+        padding: 40px;
+    }
+    .saction-1{
+        padding: 24px;
+    }
+    .saction-2{
+        padding: 24px;
+    }
 }
